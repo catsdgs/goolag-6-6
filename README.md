@@ -2,9 +2,11 @@
 
 > Fastest proxy using only nginx as the backend server
 
+**Before you deploy to Heroku, read the following: apparently, heroku decided that this repository violates the ToS, so directly clicking the button below if you're in the main repository will result in an error. You can avoid this by forking a repo, then clicking on this deploy button on your own cloned repo. However, I am NOT responsible if your heroku account gets suspended because of deploying this application. Proceed at your own risk.**
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-Demo: https://womginx.synricha.org
+Demo: https://womginx.arph.org
 
 ~~Heroku Docker demo: https://womginx.herokuapp.com~~ taken down for now. If you need one, deploy one using the button above or use the demo link.
 
@@ -67,9 +69,9 @@ cd womginx/public/wombat
 npm install
 npm run build-prod
 
-# 3. replace 'womginx.synricha.org' with 'yourdomain.com' in nginx.conf
+# 3. replace 'womginx.arph.org' with 'yourdomain.com' in nginx.conf
 cd .. # cd into public folder
-sed -i -e 's/womginx.synricha.org/yourdomain.com/g' ../nginx.conf
+sed -i -e 's/womginx.arph.org/yourdomain.com/g' ../nginx.conf
 
 # 4. replace '/home/binary/womginx/public' with your public folder
 sed -i -e "s/\/home\/binary\/womginx\/public/$(pwd | sed -e 's/\//\\\//g')/g" ../nginx.conf
